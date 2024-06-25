@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 50px; 
+}
+
+#key, .new-key {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+#key {
+    background-color: white;
+    margin-bottom: 20px; 
+}
+.new-key {
+    margin: 10px; 
+   display: block;
+}
+
+.rosado {
+    background-color: pink;
+}
+
+.naranjo {
+    background-color: orange;
+}
+
+.celeste {
+    background-color: lightblue;
+}
+
+.morado {
+    background-color: purple;
+}
+
+.gris {
+    background-color: gray;
+}
+
+.cafe {
+    background-color: #4e2609d0; 
+}

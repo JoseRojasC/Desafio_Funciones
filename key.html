@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles2.css">
+    <title>Cambio de colores con teclas</title>
+</head>
+<body>
+
+  <h1>Utiliza las teclas A-S-D-Q-W-E para interactuar</h1>
+  <div id="key"> </div>
+
+    <script>
+        let colorActual = 'white';
+
+        // Cambiar color del KEY
+        function cambiarColor(tecla) {
+            const keyDiv = document.getElementById('key');
+
+            switch (tecla) {
+                case 'a':
+                    keyDiv.style.backgroundColor = 'pink';
+                    colorActual = 'pink';
+                    break;
+                case 's':
+                    keyDiv.style.backgroundColor = 'orange';
+                    colorActual = 'orange';
+                    break;
+                case 'd':
+                    keyDiv.style.backgroundColor = 'lightblue';
+                    colorActual = 'lightblue';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // Creardor de divv
+        function crearNuevoDiv(tecla) {
+            const container = document.body; 
+
+            let nuevoDiv = document.createElement('div');
+            nuevoDiv.className = 'new-key';
+
+            switch (tecla) {
+                case 'q':
+                    nuevoDiv.classList.add('morado');
+                    nuevoDiv.textContent = 'Morado';
+                    break;
+                case 'w':
+                    nuevoDiv.classList.add('gris');
+                    nuevoDiv.textContent = 'Gris';
+                    break;
+                case 'e':
+                    nuevoDiv.classList.add('cafe');
+                    nuevoDiv.textContent = 'Café';
+                    break;
+                default:
+                    break;
+            }
+
+            container.appendChild(nuevoDiv);
+        }
+
+        // Evento teclasss
+        document.addEventListener('keydown', function(event) {
+            const tecla = event.key.toLowerCase();
+
+            if (tecla === 'a' || tecla === 's' || tecla === 'd') {
+                cambiarColor(tecla);
+            } else if (tecla === 'q' || tecla === 'w' || tecla === 'e') {
+                crearNuevoDiv(tecla);
+            }
+        });
+    </script>
+</body>
+</html>
